@@ -19,5 +19,11 @@ public:
 
 private:
     Ui::calci *ui;
+private slots:
+    void NumPressed();
+    void MathButtonPressed();
+    void EqualButton();
+    void ChangeNumbersign();
+
 };
 #endif // CALCI_H

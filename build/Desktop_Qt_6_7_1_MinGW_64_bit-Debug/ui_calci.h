@@ -26,30 +26,32 @@ class Ui_calci
 {
 public:
     QWidget *centralwidget;
-    QLineEdit *lineEdit;
+    QLineEdit *display;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
+    QPushButton *add;
+    QPushButton *subtra;
+    QPushButton *multiply;
+    QPushButton *divide;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_7;
-    QPushButton *pushButton_10;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_16;
-    QPushButton *pushButton_9;
-    QPushButton *pushButton_11;
-    QPushButton *pushButton_8;
-    QPushButton *pushButton_12;
-    QPushButton *pushButton_15;
-    QPushButton *pushButton_13;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_14;
-    QPushButton *pushButton_17;
-    QPushButton *pushButton_18;
-    QPushButton *pushButton_19;
+    QPushButton *memory;
+    QPushButton *button6;
+    QPushButton *button9;
+    QPushButton *button5;
+    QPushButton *equal;
+    QPushButton *button1;
+    QPushButton *button;
+    QPushButton *button2;
+    QPushButton *memoryplus;
+    QPushButton *memoryminus;
+    QPushButton *button0;
+    QPushButton *button3;
+    QPushButton *button4;
+    QPushButton *clear;
+    QPushButton *button8;
+    QLineEdit *display2;
+    QLineEdit *display3;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -60,19 +62,19 @@ public:
         calci->resize(800, 600);
         centralwidget = new QWidget(calci);
         centralwidget->setObjectName("centralwidget");
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(40, 40, 721, 101));
+        display = new QLineEdit(centralwidget);
+        display->setObjectName("display");
+        display->setGeometry(QRect(40, 40, 291, 101));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(40, 180, 721, 80));
+        horizontalLayoutWidget->setGeometry(QRect(40, 150, 721, 80));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(horizontalLayoutWidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color: #C0C0C0;\n"
+        add = new QPushButton(horizontalLayoutWidget);
+        add->setObjectName("add");
+        add->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: #FF8C00;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
 "}\n"
@@ -83,12 +85,12 @@ public:
 "padding :5px\n"
 "}"));
 
-        horizontalLayout->addWidget(pushButton);
+        horizontalLayout->addWidget(add);
 
-        pushButton_2 = new QPushButton(horizontalLayoutWidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color: #C0C0C0;\n"
+        subtra = new QPushButton(horizontalLayoutWidget);
+        subtra->setObjectName("subtra");
+        subtra->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: #FF8C00;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
 "}\n"
@@ -99,12 +101,12 @@ public:
 "padding :5px\n"
 "}"));
 
-        horizontalLayout->addWidget(pushButton_2);
+        horizontalLayout->addWidget(subtra);
 
-        pushButton_3 = new QPushButton(horizontalLayoutWidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color: #C0C0C0;\n"
+        multiply = new QPushButton(horizontalLayoutWidget);
+        multiply->setObjectName("multiply");
+        multiply->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: #FF8C00;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
 "}\n"
@@ -115,12 +117,12 @@ public:
 "padding :5px\n"
 "}"));
 
-        horizontalLayout->addWidget(pushButton_3);
+        horizontalLayout->addWidget(multiply);
 
-        pushButton_4 = new QPushButton(horizontalLayoutWidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
-"background-color: #C0C0C0;\n"
+        divide = new QPushButton(horizontalLayoutWidget);
+        divide->setObjectName("divide");
+        divide->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+"background-color: #FF8C00;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
 "}\n"
@@ -131,11 +133,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        horizontalLayout->addWidget(pushButton_4);
+        horizontalLayout->addWidget(divide);
 
         gridLayoutWidget = new QWidget(centralwidget);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(40, 280, 721, 251));
+        gridLayoutWidget->setGeometry(QRect(40, 230, 721, 217));
         gridLayoutWidget->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
@@ -150,9 +152,9 @@ public:
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton_7 = new QPushButton(gridLayoutWidget);
-        pushButton_7->setObjectName("pushButton_7");
-        pushButton_7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        memory = new QPushButton(gridLayoutWidget);
+        memory->setObjectName("memory");
+        memory->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -164,11 +166,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_7, 1, 2, 1, 1);
+        gridLayout->addWidget(memory, 5, 1, 1, 1);
 
-        pushButton_10 = new QPushButton(gridLayoutWidget);
-        pushButton_10->setObjectName("pushButton_10");
-        pushButton_10->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button6 = new QPushButton(gridLayoutWidget);
+        button6->setObjectName("button6");
+        button6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -180,11 +182,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_10, 2, 2, 1, 1);
+        gridLayout->addWidget(button6, 1, 2, 1, 1);
 
-        pushButton_6 = new QPushButton(gridLayoutWidget);
-        pushButton_6->setObjectName("pushButton_6");
-        pushButton_6->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button9 = new QPushButton(gridLayoutWidget);
+        button9->setObjectName("button9");
+        button9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -196,11 +198,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_6, 1, 1, 1, 1);
+        gridLayout->addWidget(button9, 2, 2, 1, 1);
 
-        pushButton_16 = new QPushButton(gridLayoutWidget);
-        pushButton_16->setObjectName("pushButton_16");
-        pushButton_16->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button5 = new QPushButton(gridLayoutWidget);
+        button5->setObjectName("button5");
+        button5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -212,11 +214,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_16, 3, 2, 1, 1);
+        gridLayout->addWidget(button5, 1, 1, 1, 1);
 
-        pushButton_9 = new QPushButton(gridLayoutWidget);
-        pushButton_9->setObjectName("pushButton_9");
-        pushButton_9->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        equal = new QPushButton(gridLayoutWidget);
+        equal->setObjectName("equal");
+        equal->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -228,11 +230,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_9, 2, 1, 1, 1);
+        gridLayout->addWidget(equal, 4, 2, 1, 1);
 
-        pushButton_11 = new QPushButton(gridLayoutWidget);
-        pushButton_11->setObjectName("pushButton_11");
-        pushButton_11->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button1 = new QPushButton(gridLayoutWidget);
+        button1->setObjectName("button1");
+        button1->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -244,11 +246,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_11, 0, 0, 1, 1);
+        gridLayout->addWidget(button1, 0, 0, 1, 1);
 
-        pushButton_8 = new QPushButton(gridLayoutWidget);
-        pushButton_8->setObjectName("pushButton_8");
-        pushButton_8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button = new QPushButton(gridLayoutWidget);
+        button->setObjectName("button");
+        button->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -260,11 +262,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_8, 2, 0, 1, 1);
+        gridLayout->addWidget(button, 2, 0, 1, 1);
 
-        pushButton_12 = new QPushButton(gridLayoutWidget);
-        pushButton_12->setObjectName("pushButton_12");
-        pushButton_12->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button2 = new QPushButton(gridLayoutWidget);
+        button2->setObjectName("button2");
+        button2->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -276,11 +278,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_12, 0, 1, 1, 1);
+        gridLayout->addWidget(button2, 0, 1, 1, 1);
 
-        pushButton_15 = new QPushButton(gridLayoutWidget);
-        pushButton_15->setObjectName("pushButton_15");
-        pushButton_15->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        memoryplus = new QPushButton(gridLayoutWidget);
+        memoryplus->setObjectName("memoryplus");
+        memoryplus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -292,11 +294,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_15, 3, 1, 1, 1);
+        gridLayout->addWidget(memoryplus, 5, 0, 1, 1);
 
-        pushButton_13 = new QPushButton(gridLayoutWidget);
-        pushButton_13->setObjectName("pushButton_13");
-        pushButton_13->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        memoryminus = new QPushButton(gridLayoutWidget);
+        memoryminus->setObjectName("memoryminus");
+        memoryminus->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -308,11 +310,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_13, 0, 2, 1, 1);
+        gridLayout->addWidget(memoryminus, 5, 2, 1, 1);
 
-        pushButton_5 = new QPushButton(gridLayoutWidget);
-        pushButton_5->setObjectName("pushButton_5");
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button0 = new QPushButton(gridLayoutWidget);
+        button0->setObjectName("button0");
+        button0->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -324,11 +326,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_5, 1, 0, 1, 1);
+        gridLayout->addWidget(button0, 4, 1, 1, 1);
 
-        pushButton_14 = new QPushButton(gridLayoutWidget);
-        pushButton_14->setObjectName("pushButton_14");
-        pushButton_14->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button3 = new QPushButton(gridLayoutWidget);
+        button3->setObjectName("button3");
+        button3->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -340,11 +342,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_14, 3, 0, 1, 1);
+        gridLayout->addWidget(button3, 0, 2, 1, 1);
 
-        pushButton_17 = new QPushButton(gridLayoutWidget);
-        pushButton_17->setObjectName("pushButton_17");
-        pushButton_17->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button4 = new QPushButton(gridLayoutWidget);
+        button4->setObjectName("button4");
+        button4->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -356,11 +358,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_17, 4, 0, 1, 1);
+        gridLayout->addWidget(button4, 1, 0, 1, 1);
 
-        pushButton_18 = new QPushButton(gridLayoutWidget);
-        pushButton_18->setObjectName("pushButton_18");
-        pushButton_18->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        clear = new QPushButton(gridLayoutWidget);
+        clear->setObjectName("clear");
+        clear->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -372,11 +374,11 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_18, 4, 1, 1, 1);
+        gridLayout->addWidget(clear, 4, 0, 1, 1);
 
-        pushButton_19 = new QPushButton(gridLayoutWidget);
-        pushButton_19->setObjectName("pushButton_19");
-        pushButton_19->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button8 = new QPushButton(gridLayoutWidget);
+        button8->setObjectName("button8");
+        button8->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -388,8 +390,14 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(pushButton_19, 4, 2, 1, 1);
+        gridLayout->addWidget(button8, 2, 1, 1, 1);
 
+        display2 = new QLineEdit(centralwidget);
+        display2->setObjectName("display2");
+        display2->setGeometry(QRect(352, 40, 131, 101));
+        display3 = new QLineEdit(centralwidget);
+        display3->setObjectName("display3");
+        display3->setGeometry(QRect(510, 40, 261, 101));
         calci->setCentralWidget(centralwidget);
         menubar = new QMenuBar(calci);
         menubar->setObjectName("menubar");
@@ -407,25 +415,25 @@ public:
     void retranslateUi(QMainWindow *calci)
     {
         calci->setWindowTitle(QCoreApplication::translate("calci", "calci", nullptr));
-        pushButton->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_7->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_10->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_16->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_9->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_11->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_8->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_12->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_15->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_13->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_14->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_17->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_18->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
-        pushButton_19->setText(QCoreApplication::translate("calci", "PushButton", nullptr));
+        add->setText(QCoreApplication::translate("calci", "add", nullptr));
+        subtra->setText(QCoreApplication::translate("calci", "sub", nullptr));
+        multiply->setText(QCoreApplication::translate("calci", "mul", nullptr));
+        divide->setText(QCoreApplication::translate("calci", "div", nullptr));
+        memory->setText(QCoreApplication::translate("calci", "Memory", nullptr));
+        button6->setText(QCoreApplication::translate("calci", "6", nullptr));
+        button9->setText(QCoreApplication::translate("calci", "9", nullptr));
+        button5->setText(QCoreApplication::translate("calci", "5", nullptr));
+        equal->setText(QCoreApplication::translate("calci", "equal", nullptr));
+        button1->setText(QCoreApplication::translate("calci", "1", nullptr));
+        button->setText(QCoreApplication::translate("calci", "7", nullptr));
+        button2->setText(QCoreApplication::translate("calci", "2", nullptr));
+        memoryplus->setText(QCoreApplication::translate("calci", "Memory+", nullptr));
+        memoryminus->setText(QCoreApplication::translate("calci", "Memory-", nullptr));
+        button0->setText(QCoreApplication::translate("calci", "0", nullptr));
+        button3->setText(QCoreApplication::translate("calci", "3", nullptr));
+        button4->setText(QCoreApplication::translate("calci", "4", nullptr));
+        clear->setText(QCoreApplication::translate("calci", "clear", nullptr));
+        button8->setText(QCoreApplication::translate("calci", "8", nullptr));
     } // retranslateUi
 
 };
