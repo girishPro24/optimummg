@@ -26,6 +26,18 @@ calci::calci(QWidget *parent)
         connect(numbutton[i], SIGNAL(released()),this,
                 SLOT(NumPressed()));
     }
+    connect(ui->add,SIGNAL(released()), this,
+        SLOT(MathButtonPressed()));
+    connect(ui->subtra,SIGNAL(released()), this,
+            SLOT(MathButtonPressed()));
+    connect(ui->multiply,SIGNAL(released()), this,
+            SLOT(MathButtonPressed()));
+    connect(ui->divide,SIGNAL(released()), this,
+            SLOT(MathButtonPressed()));
+    connect(ui->equal,SIGNAL(released()), this,
+            SLOT(EqualButton()));
+    //connect(ui->add,SIGNAL(released()), this,
+            //SLOT(ChangeNumbersign()));
 }
 
 calci::~calci()
@@ -58,11 +70,11 @@ void calci::MathButtonPressed(){
     calcval = displayval.toDouble();
     QPushButton *button =(QPushButton*)sender();
     QString butval =button->text();
-    if(QString::compare(butval,"/",Qt::CaseInsensitive)==0){
+    if(QString::compare(butval,"div",Qt::CaseInsensitive)==0){
         divtrigger=true;
-    }else if (QString::compare(butval,"*",Qt::CaseInsensitive)==0){
+    }else if (QString::compare(butval,"mul",Qt::CaseInsensitive)==0){
         multrigger=true;
-    }else if (QString::compare(butval,"+",Qt::CaseInsensitive)==0){
+    }else if (QString::compare(butval,"add",Qt::CaseInsensitive)==0){
         addtrigger=true;
     }   else {
         subtrigger=true;
@@ -95,12 +107,18 @@ void calci::ChangeNumbersign(){
     QRegularExpressionMatch match = reg.match(displayval);
     if (match.hasMatch())
         {
-    double dbldisplayval =displayval.toDouble();
+        double dbldisplayval =displayval.toDouble();
         double dbldisplayvalsign = -1* dbldisplayval;
         ui->display->setText(QString::number(dbldisplayvalsign));
 
     }
 }
 
+//void calci::operation(){
+
+//}
+//void calci::result(){
+
+//}
 
 

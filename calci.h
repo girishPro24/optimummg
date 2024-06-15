@@ -24,6 +24,8 @@ private slots:
     void MathButtonPressed();
     void EqualButton();
     void ChangeNumbersign();
+    //void operation();
+    //void result();
 
 };
 #endif // CALCI_H
