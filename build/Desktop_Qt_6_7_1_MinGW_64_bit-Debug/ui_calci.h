@@ -30,7 +30,7 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *add;
-    QPushButton *subtra;
+    QPushButton *subtract;
     QPushButton *multiply;
     QPushButton *divide;
     QWidget *gridLayoutWidget;
@@ -41,7 +41,7 @@ public:
     QPushButton *button5;
     QPushButton *equal;
     QPushButton *button1;
-    QPushButton *button;
+    QPushButton *button7;
     QPushButton *button2;
     QPushButton *memoryplus;
     QPushButton *memoryminus;
@@ -52,6 +52,7 @@ public:
     QPushButton *button8;
     QLineEdit *display2;
     QLineEdit *display3;
+    QLineEdit *display4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -64,10 +65,10 @@ public:
         centralwidget->setObjectName("centralwidget");
         display = new QLineEdit(centralwidget);
         display->setObjectName("display");
-        display->setGeometry(QRect(40, 40, 291, 101));
+        display->setGeometry(QRect(110, 150, 71, 61));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
-        horizontalLayoutWidget->setGeometry(QRect(40, 150, 721, 80));
+        horizontalLayoutWidget->setGeometry(QRect(30, 220, 721, 80));
         horizontalLayout = new QHBoxLayout(horizontalLayoutWidget);
         horizontalLayout->setObjectName("horizontalLayout");
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
@@ -87,9 +88,9 @@ public:
 
         horizontalLayout->addWidget(add);
 
-        subtra = new QPushButton(horizontalLayoutWidget);
-        subtra->setObjectName("subtra");
-        subtra->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        subtract = new QPushButton(horizontalLayoutWidget);
+        subtract->setObjectName("subtract");
+        subtract->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #FF8C00;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -101,7 +102,7 @@ public:
 "padding :5px\n"
 "}"));
 
-        horizontalLayout->addWidget(subtra);
+        horizontalLayout->addWidget(subtract);
 
         multiply = new QPushButton(horizontalLayoutWidget);
         multiply->setObjectName("multiply");
@@ -137,7 +138,7 @@ public:
 
         gridLayoutWidget = new QWidget(centralwidget);
         gridLayoutWidget->setObjectName("gridLayoutWidget");
-        gridLayoutWidget->setGeometry(QRect(40, 230, 721, 217));
+        gridLayoutWidget->setGeometry(QRect(30, 310, 721, 217));
         gridLayoutWidget->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
@@ -248,9 +249,9 @@ public:
 
         gridLayout->addWidget(button1, 0, 0, 1, 1);
 
-        button = new QPushButton(gridLayoutWidget);
-        button->setObjectName("button");
-        button->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        button7 = new QPushButton(gridLayoutWidget);
+        button7->setObjectName("button7");
+        button7->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -262,7 +263,7 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(button, 2, 0, 1, 1);
+        gridLayout->addWidget(button7, 2, 0, 1, 1);
 
         button2 = new QPushButton(gridLayoutWidget);
         button2->setObjectName("button2");
@@ -394,10 +395,13 @@ public:
 
         display2 = new QLineEdit(centralwidget);
         display2->setObjectName("display2");
-        display2->setGeometry(QRect(352, 40, 131, 101));
+        display2->setGeometry(QRect(110, 90, 71, 51));
         display3 = new QLineEdit(centralwidget);
         display3->setObjectName("display3");
-        display3->setGeometry(QRect(510, 40, 261, 101));
+        display3->setGeometry(QRect(110, 20, 71, 61));
+        display4 = new QLineEdit(centralwidget);
+        display4->setObjectName("display4");
+        display4->setGeometry(QRect(190, 20, 91, 181));
         calci->setCentralWidget(centralwidget);
         menubar = new QMenuBar(calci);
         menubar->setObjectName("menubar");
@@ -416,16 +420,16 @@ public:
     {
         calci->setWindowTitle(QCoreApplication::translate("calci", "calci", nullptr));
         add->setText(QCoreApplication::translate("calci", "add", nullptr));
-        subtra->setText(QCoreApplication::translate("calci", "sub", nullptr));
+        subtract->setText(QCoreApplication::translate("calci", "sub", nullptr));
         multiply->setText(QCoreApplication::translate("calci", "mul", nullptr));
         divide->setText(QCoreApplication::translate("calci", "div", nullptr));
-        memory->setText(QCoreApplication::translate("calci", "Memory", nullptr));
+        memory->setText(QCoreApplication::translate("calci", "+/-", nullptr));
         button6->setText(QCoreApplication::translate("calci", "6", nullptr));
         button9->setText(QCoreApplication::translate("calci", "9", nullptr));
         button5->setText(QCoreApplication::translate("calci", "5", nullptr));
         equal->setText(QCoreApplication::translate("calci", "equal", nullptr));
         button1->setText(QCoreApplication::translate("calci", "1", nullptr));
-        button->setText(QCoreApplication::translate("calci", "7", nullptr));
+        button7->setText(QCoreApplication::translate("calci", "7", nullptr));
         button2->setText(QCoreApplication::translate("calci", "2", nullptr));
         memoryplus->setText(QCoreApplication::translate("calci", "Memory+", nullptr));
         memoryminus->setText(QCoreApplication::translate("calci", "Memory-", nullptr));

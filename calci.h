@@ -14,18 +14,26 @@ class calci : public QMainWindow
     Q_OBJECT
 
 public:
-    calci(QWidget *parent = nullptr);
+    calci(QWidget *parent = 0);
     ~calci();
 
 private:
     Ui::calci *ui;
+
+
 private slots:
     void NumPressed();
+   // void numpressed2();
+    //void displayoff();
+    //void disp();
     void MathButtonPressed();
     void EqualButton();
     void ChangeNumbersign();
+    //void clearbutton();
+
     //void operation();
     //void result();
+
 
 };
 #endif // CALCI_H

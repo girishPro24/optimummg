@@ -17,18 +17,18 @@
    <widget class="QLineEdit" name="display">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>40</y>
-      <width>291</width>
-      <height>101</height>
+      <x>110</x>
+      <y>150</y>
+      <width>71</width>
+      <height>61</height>
      </rect>
     </property>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>150</y>
+      <x>30</x>
+      <y>220</y>
       <width>721</width>
       <height>80</height>
      </rect>
@@ -55,7 +55,7 @@ padding :5px
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="subtra">
+      <widget class="QPushButton" name="subtract">
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: #FF8C00;
@@ -119,8 +119,8 @@ padding :5px
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>40</x>
-      <y>230</y>
+      <x>30</x>
+      <y>310</y>
       <width>721</width>
       <height>217</height>
      </rect>
@@ -155,7 +155,7 @@ padding :5px
 }</string>
        </property>
        <property name="text">
-        <string>Memory</string>
+        <string>+/-</string>
        </property>
       </widget>
      </item>
@@ -260,7 +260,7 @@ padding :5px
       </widget>
      </item>
      <item row="2" column="0">
-      <widget class="QPushButton" name="button">
+      <widget class="QPushButton" name="button7">
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: #C0C0C0;
@@ -444,20 +444,30 @@ padding :5px
    <widget class="QLineEdit" name="display2">
     <property name="geometry">
      <rect>
-      <x>352</x>
-      <y>40</y>
-      <width>131</width>
-      <height>101</height>
+      <x>110</x>
+      <y>90</y>
+      <width>71</width>
+      <height>51</height>
      </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="display3">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>40</y>
-      <width>261</width>
-      <height>101</height>
+      <x>110</x>
+      <y>20</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="display4">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>20</y>
+      <width>91</width>
+      <height>181</height>
      </rect>
     </property>
    </widget>
