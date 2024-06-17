@@ -17,7 +17,7 @@
    <widget class="QLineEdit" name="display">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>190</x>
       <y>150</y>
       <width>71</width>
       <height>61</height>
@@ -140,7 +140,7 @@ padding :5px
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <item row="5" column="1">
-      <widget class="QPushButton" name="memory">
+      <widget class="QPushButton" name="change">
        <property name="styleSheet">
         <string notr="true">QPushButton{
 background-color: #C0C0C0;
@@ -155,7 +155,7 @@ padding :5px
 }</string>
        </property>
        <property name="text">
-        <string>+/-</string>
+        <string>change</string>
        </property>
       </widget>
      </item>
@@ -444,7 +444,7 @@ padding :5px
    <widget class="QLineEdit" name="display2">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>190</x>
       <y>90</y>
       <width>71</width>
       <height>51</height>
@@ -454,7 +454,7 @@ padding :5px
    <widget class="QLineEdit" name="display3">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>190</x>
       <y>20</y>
       <width>71</width>
       <height>61</height>
@@ -464,10 +464,30 @@ padding :5px
    <widget class="QLineEdit" name="display4">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>280</x>
       <y>20</y>
       <width>91</width>
-      <height>181</height>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="display5">
+    <property name="geometry">
+     <rect>
+      <x>392</x>
+      <y>20</y>
+      <width>101</width>
+      <height>191</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="display6">
+    <property name="geometry">
+     <rect>
+      <x>510</x>
+      <y>20</y>
+      <width>101</width>
+      <height>191</height>
      </rect>
     </property>
    </widget>

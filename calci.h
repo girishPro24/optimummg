@@ -29,6 +29,8 @@ private slots:
     void MathButtonPressed();
     void EqualButton();
     void ChangeNumbersign();
+    void clear();
+    void mem();
     //void clearbutton();
 
     //void operation();

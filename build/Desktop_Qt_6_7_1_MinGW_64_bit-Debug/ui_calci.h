@@ -35,7 +35,7 @@ public:
     QPushButton *divide;
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
-    QPushButton *memory;
+    QPushButton *change;
     QPushButton *button6;
     QPushButton *button9;
     QPushButton *button5;
@@ -53,6 +53,8 @@ public:
     QLineEdit *display2;
     QLineEdit *display3;
     QLineEdit *display4;
+    QLineEdit *display5;
+    QLineEdit *display6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -65,7 +67,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         display = new QLineEdit(centralwidget);
         display->setObjectName("display");
-        display->setGeometry(QRect(110, 150, 71, 61));
+        display->setGeometry(QRect(190, 150, 71, 61));
         horizontalLayoutWidget = new QWidget(centralwidget);
         horizontalLayoutWidget->setObjectName("horizontalLayoutWidget");
         horizontalLayoutWidget->setGeometry(QRect(30, 220, 721, 80));
@@ -153,9 +155,9 @@ public:
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName("gridLayout");
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        memory = new QPushButton(gridLayoutWidget);
-        memory->setObjectName("memory");
-        memory->setStyleSheet(QString::fromUtf8("QPushButton{\n"
+        change = new QPushButton(gridLayoutWidget);
+        change->setObjectName("change");
+        change->setStyleSheet(QString::fromUtf8("QPushButton{\n"
 "background-color: #C0C0C0;\n"
 "border: 1px solidgray;\n"
 "padding :5px\n"
@@ -167,7 +169,7 @@ public:
 "padding :5px\n"
 "}"));
 
-        gridLayout->addWidget(memory, 5, 1, 1, 1);
+        gridLayout->addWidget(change, 5, 1, 1, 1);
 
         button6 = new QPushButton(gridLayoutWidget);
         button6->setObjectName("button6");
@@ -395,13 +397,19 @@ public:
 
         display2 = new QLineEdit(centralwidget);
         display2->setObjectName("display2");
-        display2->setGeometry(QRect(110, 90, 71, 51));
+        display2->setGeometry(QRect(190, 90, 71, 51));
         display3 = new QLineEdit(centralwidget);
         display3->setObjectName("display3");
-        display3->setGeometry(QRect(110, 20, 71, 61));
+        display3->setGeometry(QRect(190, 20, 71, 61));
         display4 = new QLineEdit(centralwidget);
         display4->setObjectName("display4");
-        display4->setGeometry(QRect(190, 20, 91, 181));
+        display4->setGeometry(QRect(280, 20, 91, 191));
+        display5 = new QLineEdit(centralwidget);
+        display5->setObjectName("display5");
+        display5->setGeometry(QRect(392, 20, 101, 191));
+        display6 = new QLineEdit(centralwidget);
+        display6->setObjectName("display6");
+        display6->setGeometry(QRect(510, 20, 101, 191));
         calci->setCentralWidget(centralwidget);
         menubar = new QMenuBar(calci);
         menubar->setObjectName("menubar");
@@ -423,7 +431,7 @@ public:
         subtract->setText(QCoreApplication::translate("calci", "sub", nullptr));
         multiply->setText(QCoreApplication::translate("calci", "mul", nullptr));
         divide->setText(QCoreApplication::translate("calci", "div", nullptr));
-        memory->setText(QCoreApplication::translate("calci", "+/-", nullptr));
+        change->setText(QCoreApplication::translate("calci", "change", nullptr));
         button6->setText(QCoreApplication::translate("calci", "6", nullptr));
         button9->setText(QCoreApplication::translate("calci", "9", nullptr));
         button5->setText(QCoreApplication::translate("calci", "5", nullptr));
